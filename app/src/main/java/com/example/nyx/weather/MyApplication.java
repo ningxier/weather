@@ -23,10 +23,10 @@ public class MyApplication extends Application{
         super.onCreate();
         Log.d(TAG,"MyApplication->Oncreate");
         mApplication=this;
-        mCityDB=openCityDB();
+        mCityDB=openCityDB();//打开数据库
         initCityList();
     }
-    private void initCityList(){
+    private void initCityList(){//初始化城市列表
         mCityList=new ArrayList<City>();
         new Thread(new Runnable() {
             @Override
@@ -47,7 +47,7 @@ public class MyApplication extends Application{
         Log.d(TAG,"i="+i);
         return true;
     }
-
+//获取城市列表
     public List<City> getCityList() {
         return mCityList;
     }
@@ -55,13 +55,13 @@ public class MyApplication extends Application{
     public static MyApplication getInstance(){
         return mApplication;
     }
-    private CityDB openCityDB(){
+    private CityDB openCityDB(){//打开数据库
         String path="/data"
                 +Environment.getDataDirectory().getAbsolutePath()
                 + File.separator+getPackageName()
                 +File.separator+"databases1"
                 +File.separator
-                + CityDB.CITY_DB_NAME;
+                + CityDB.CITY_DB_NAME;//获取City路径
         File db=new File(path);
         Log.d(TAG,path);
         if(!db.exists()){

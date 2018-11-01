@@ -19,7 +19,8 @@ public class TodayWeather {
     public String getFengxiang() {
         return fengxiang;
     }
-public void setFengxiang(String fengxiang) {
+
+    public void setFengxiang(String fengxiang) {
     this.fengxiang = fengxiang;
 }
 

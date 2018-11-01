@@ -8,7 +8,7 @@
     android:layout_height="45.0dip"
     android:background="#ffcd2626"
     android:gravity="center_vertical">
-
+//加图片
     <ImageView
         android:id="@+id/title_city_manager"
         android:layout_width="45.0dip"
@@ -22,6 +22,7 @@
         android:layout_marginTop="2.0dip"
         android:layout_toRightOf="@id/title_city_manager"
         android:background="#A71717"/>
+    //加文本
     <TextView
         android:id="@+id/title_city_name"
         android:layout_width="fill_parent"
@@ -53,7 +54,7 @@
         android:layout_toLeftOf="@id/title_share"
         android:src="@drawable/base_action_bar_action_city"/>
     </RelativeLayout>
-
+//线性布局设置信息
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
